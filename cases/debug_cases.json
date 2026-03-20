@@ -1,0 +1,103 @@
+{
+  "cases": [
+    {
+      "problem": "TypeError: Cannot read property id of undefined",
+      "keywords": [
+        "TypeError",
+        "property",
+        "read",
+        "Cannot",
+        "undefined",
+        "Error"
+      ],
+      "problem_type": "frontend",
+      "root_cause": "",
+      "solution": "",
+      "prevention": "",
+      "id": "case_20260320115940",
+      "created_at": "2026-03-20 11:59:40",
+      "occurrences": 9,
+      "last_occurrence": "2026-03-20 13:04:42"
+    },
+    {
+      "problem": "Cannot read property id of undefined",
+      "keywords": [
+        "undefined",
+        "read",
+        "Cannot",
+        "property"
+      ],
+      "problem_type": "frontend",
+      "root_cause": "",
+      "solution": "",
+      "prevention": "",
+      "id": "case_20260320120631",
+      "created_at": "2026-03-20 12:06:31",
+      "occurrences": 1
+    },
+    {
+      "problem": "测试用例生成失败，API超时",
+      "keywords": [
+        "API超时",
+        "测试用例生成失败"
+      ],
+      "problem_type": "backend",
+      "root_cause": "",
+      "solution": "",
+      "prevention": "",
+      "id": "case_20260320121042",
+      "created_at": "2026-03-20 12:10:42",
+      "occurrences": 1
+    },
+    {
+      "problem": "TypeError: x is undefined",
+      "keywords": [
+        "TypeError"
+      ],
+      "id": "case_20260320122718486115",
+      "created_at": "2026-03-20 12:27:18",
+      "occurrences": 3,
+      "last_occurrence": "2026-03-20 12:38:18"
+    },
+    {
+      "problem": "ValueError: invalid literal for int()",
+      "keywords": [
+        "ValueError"
+      ],
+      "id": "case_20260320123049737486",
+      "created_at": "2026-03-20 12:30:49",
+      "occurrences": 2,
+      "last_occurrence": "2026-03-20 12:30:49"
+    },
+    {
+      "problem": "KeyError: 'user_id'",
+      "keywords": [
+        "user_id",
+        "KeyError"
+      ],
+      "problem_type": "backend",
+      "root_cause": "字典中不存在指定的键",
+      "solution": "本地方案:\n- 使用 dict.get(key, default) 代替 dict[key]\n- 使用 'key' in dict 检查键是否存在\n\n📝 修复代码模板:\n```\n# 使用 .get() 方法\nvalue = data.get('key', 'default_value')\n```",
+      "prevention": "本地建议:\n- 使用 .get() 方法\n- 使用 defaultdict",
+      "id": "case_20260320125403074133",
+      "created_at": "2026-03-20 12:54:03",
+      "occurrences": 1
+    },
+    {
+      "problem": "Error: EADDRINUSE: listen EADDRINUSE: port 3000",
+      "keywords": [
+        "listen",
+        "Error",
+        "EADDRINUSE",
+        "port"
+      ],
+      "problem_type": "backend",
+      "root_cause": "端口被占用",
+      "solution": "本地方案:\n- 找到占用端口的进程并终止\n- 使用其他端口\n- 重启计算机\n\n📝 修复代码模板:\n```\n# 查找占用端口的进程\n# Windows\nnetstat -ano | findstr :3000\ntaskkill /PID <PID> /F\n\n# Linux/Mac\nlsof -i :3000\nkill -9 <PID>\n```",
+      "prevention": "本地建议:\n- 使用环境变量配置端口\n- 添加端口检测",
+      "id": "case_20260320130442725279",
+      "created_at": "2026-03-20 13:04:42",
+      "occurrences": 1
+    }
+  ]
+}
